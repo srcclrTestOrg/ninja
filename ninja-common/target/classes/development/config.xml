@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 优先级从上到下，依次降低 -->
+<configuration>
+  <system/>
+  <yml fileName="settings.yml"/>
+  <properties fileName="database.properties"/>
+  <properties fileName="development.properties"/>
+</configuration>

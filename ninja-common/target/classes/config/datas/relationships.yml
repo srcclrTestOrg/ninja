@@ -1,0 +1,18 @@
+relationships:
+  version: 1
+  # NOTE: We should not change the Name-ID mapping at any time. So don't reuse the ID for another bank.
+  data:
+    - name: "parents"
+      description: "父母"
+    - name: "spouse"
+      description: "配偶"
+    - name: "sibling"
+      description: "兄弟姐妹"
+    - name: "teacher"
+      description: "老师"
+    - name: "classmate"
+      description: "同学"
+    - name: "friend"
+      description: "朋友"
+    - name: "colleague"
+      description: "同事"

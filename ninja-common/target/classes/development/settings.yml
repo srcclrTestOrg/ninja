@@ -1,0 +1,11 @@
+# FraudMetrix
+fraud_metrix_url: 'https://apitest.fraudmetrix.cn/riskService'
+fraud_metrix_android_key: 'f87802ecae6d47c18d56d419cb339401'
+fraud_metrix_web_key: '93428dbd2d5045d1a5cfbc92cc6a0750'
+fraud_metrix_portal: 'https://portaltest.fraudmetrix.cn/activity/history.htm?seq='
+
+# WeDefend
+wedefend_loan_application_url: 'https://xtest.wolaidai.com:9010/riskService/loanApplication'
+
+# CoolPad
+coolpad_ec_application_url: 'http://www.coolpad.com/wolaidai/returnUrl.htm'

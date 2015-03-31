@@ -1,0 +1,70 @@
+system_user_email: "support@wolaidai.com"
+service_number: '400-600-3323'
+
+# new rates for V2.0
+#interest_rate: 0.00065
+#management_fee_rate: 0.00035
+interest_rate: 0.00035
+management_fee_rate: 0.00065
+
+student_handling_fee: 15
+employee_handling_fee: 15
+
+withdrawal_fee_rate: 0.001
+deposit_fee_rate: 0.0025 # it has to be > yilian_charge_rate_gather
+
+# fee rates in loan_agreement document
+doc_min_payment_charge: 0
+doc_withdrawal_fee_rate: 0
+doc_deposit_fee_rate: 0
+
+yilian_charge_rate_pay: 0.0010
+yilian_charge_rate_gather: 0.0020
+
+# the minimal fee yilian charges for each transaction
+min_payment_charge: 2
+
+# Overdue charges for V1
+overdue_penalty: 10
+multiple_installments_overdue_interest_rate: 0.0003333
+multiple_installments_overdue_management_fee_rate: 0.0012667
+single_installment_overdue_interest_rate: 0.00035
+single_installment_overdue_management_fee_rate: 0.001065
+
+# Auto reject reason code
+auto_reject_reason_code_for_multiple_invalid_application: 'D701'
+auto_reject_reason_code_for_under_age_18: 'D302'
+auto_reject_reason_code_for_under_contact_count_5: 'D999'
+auto_reject_reason_code_for_same_device: 'D314'
+auto_reject_reason_code_for_none_student_not_in_gd: 'D301'
+auto_reject_reason_code_for_blacklist: 'D103'
+auto_reject_reason_code_for_over_due: 'D202'
+auto_reject_reason_code_for_over_due_history: 'D201'
+auto_reject_reason_code_for_no_enough_credit_line: 'D203'
+auto_reject_reason_code_fraud_metrix: 'D206'
+
+# FraudMetrix
+fraud_metrix_url: 'https://api.fraudmetrix.cn/riskService'
+fraud_metrix_android_key: 'ad2374d7d0c3478082d8661787efce7a'
+fraud_metrix_web_key: '9e931bea65764dd18a2e3f88d8802252'
+fraud_metrix_portal: 'https://portal.fraudmetrix.cn/activity/history.htm?seq='
+
+# WeDefend
+wedefend_loan_application_url: 'https://x.wolaidai.com:9010/riskService/loanApplication'
+
+
+#CoolPad tenor
+coolpad_tenor: '12M'
+# coolpad goods return period
+coolpad_return_goods_period: 10
+# coolpad payment result call back
+coolpad_ec_application_url: 'http://www.coolpad.com/wolaidai/returnUrl.htm'
+
+# bkofficer login
+bkofficer_login_url: 'https://ijapi3.wolaidai.com/jrocket2-bkofficer/login'
+bkofficer_login_mobile: '1234567890'
+bkofficer_login_pwd: '1234abcd'
+
+# price engine
+product_price_base_url: 'https://ijapi3.wolaidai.com/jrocket2-bkofficer/systemAdmin/validPrice'
+

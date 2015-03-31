@@ -1,0 +1,59 @@
+banks:
+  version: 2
+  # NOTE: We should not change the Name-ID mapping at any time. So don't reuse the ID for another bank.
+  data:
+    - name: "中国工商银行"
+      id: "1"
+      logo: "ICBC.png"
+    # - name: "中国农业银行"
+    #   id: "2"
+    #   logo: 'ABC.png'
+    - name: "中国建设银行"
+      id: "3"
+      logo: 'CCB.png'
+    #- name: "中国交通银行"
+    #  id: "4"
+    #  logo: 'BOCM.png'
+
+    #- name: "中国银行"
+    #  id: "5"
+    #  logo: 'BC.png'
+    - name: "中国邮政储蓄银行"
+      id: "6"
+      logo: 'PSBC.png'
+    - name: "招商银行"
+      id: "7"
+      logo: 'CMBC.png'
+    - name: "平安银行"
+      id: "8"
+      logo: 'PAB.png'
+    - name: "兴业银行"
+      id: "9"
+      logo: 'CIB.png'
+    - name: "光大银行"
+      id: "10"
+      logo: 'CEB.png'
+    - name: "中国民生银行"
+      id: "11"
+      logo: 'CMSB.png'
+    - name: "广发银行"
+      id: "12"
+      logo: 'GDB.png'
+    - name: "广州银行"
+      id: "13"
+      logo: 'GZB.png'
+    # no huaxia logo
+    - name: "华夏银行"
+      id: "14"
+      logo: 'HB.png'
+    - name: "中信银行"
+      id: "15"
+      logo: 'CITIC.png'
+    - name: "深圳发展银行"
+      id: "16"
+      logo: 'SDB.png'
+    #- name: "广州农商银行"
+    #  id: "17"
+    - name: "浦发银行"
+      id: "18"
+      logo: 'SPDB.png'

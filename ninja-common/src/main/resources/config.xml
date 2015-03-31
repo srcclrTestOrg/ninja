@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<configuration>
+  <system/>
+  <properties fileName="application.properties"/>
+  <xml fileName="gui.xml"></xml>
+  <json fileName="config/datas/test.json"></json>
+</configuration>
