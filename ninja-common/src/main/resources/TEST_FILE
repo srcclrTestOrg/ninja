@@ -1,0 +1,6 @@
+<configuration>
+   <element>value</element>
+   <space xml:space="preserve">
+     <description xml:space="default">     Some text      </description>
+   </space>
+ </configuration>
