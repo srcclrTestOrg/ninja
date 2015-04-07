@@ -27,10 +27,14 @@ public class ConfigurationBuilder extends DefaultConfigurationBuilder
     
 	 /** Constant for the provider for json files. */
     private static final ConfigurationProvider JSON_PROVIDER = new JsonConfigurationProvider();
+    
+    /** Constant for the provider for yml files. */
+    //private static final ConfigurationProvider YML_PROVIDER = new YamlConfigurationProvider();
 	
 	 public ConfigurationBuilder() {
 		  super();
 		  addConfigurationProvider("json", JSON_PROVIDER);
+		  //addConfigurationProvider("yml", YML_PROVIDER);
 	 }
 	 
    public ConfigurationBuilder(File file)

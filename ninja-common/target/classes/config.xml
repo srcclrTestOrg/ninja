@@ -2,7 +2,8 @@
 
 <configuration>
   <system/>
-  <properties fileName="application.properties"/>
+  <properties fileName="env.properties"/>
+  <properties fileName="${service.env}/${service.env}.properties"></properties>
   <xml fileName="gui.xml"></xml>
   <json fileName="config/datas/test.json"></json>
 </configuration>

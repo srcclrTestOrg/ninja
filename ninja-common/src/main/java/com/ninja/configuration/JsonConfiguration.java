@@ -30,7 +30,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author <a href="mailto:huan.sheng@wolaidai.com">shenghuan</a>
  */
 public class JsonConfiguration  extends AbstractHierarchicalFileConfiguration
-implements EntityResolver, EntityRegistry
 {
 	private ObjectMapper objectMapper = new ObjectMapper();
 
@@ -78,38 +77,6 @@ implements EntityResolver, EntityRegistry
 		}
 	}
 
-	public void load(Reader in) throws ConfigurationException
-	{
-			try
-			{
-				response = objectMapper.readValue(in, MyResponse.class);
-				ConfigurationNode root = getRootNode();
-				
-				ConfigurationNode node = createNode("data");
-	            node.setValue(response.getData());
-	            
-	            ConfigurationNode sign = createNode("sign");
-	            node.setValue(response.getSign());
-	            
-				root.addChild(sign);
-				root.addChild(node);
-			}
-			catch (JsonParseException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			catch (JsonMappingException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			catch (IOException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	}
 
 	public void save(Writer out) throws ConfigurationException
 	{
@@ -195,4 +162,12 @@ implements EntityResolver, EntityRegistry
             JsonConfiguration.this.load(in);
         }
     }
+
+
+
+	public void load(Reader in) throws ConfigurationException
+	{
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -35,6 +35,8 @@ public class Configurations
 		System.out.println(config.getString("java.home"));
 		System.out.println(config.getString("data"));
 		System.out.println(config.getString("sign"));
+		System.out.println(config.getString("service.env"));
+		System.out.println(config.getString("mock.otp"));
 	}
 
 }
