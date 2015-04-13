@@ -9,6 +9,8 @@
    	<module>ninja-jackson</module>
    	<module>ninja-httpclient</module>
    	<module>ninja-common</module>
+   	<module>ninja-guava</module>
+   	<module>ninja-jetty</module>
    </modules>
    
    <dependencies>
