@@ -23,13 +23,10 @@ public class SelectorDemo
 		Selector selector = Selector.open();
 		ServerSocketChannel ssc = ServerSocketChannel.open();
 		ssc.socket().bind(new InetSocketAddress(8086));
-		//ssc.configureBlocking(false);
-		
-		//ssc.register(selector,SelectionKey.OP_ACCEPT);
-		
+
 		SocketChannel channel = ssc.accept();
 		channel.configureBlocking(false);
-		
+
 		channel.register(selector, SelectionKey.OP_READ);
 		while (true)
 		{
@@ -51,7 +48,7 @@ public class SelectorDemo
 				}
 				else if (key.isReadable())
 				{
-					
+
 					// a channel is ready for reading
 					ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 					int reads = channel.read(byteBuffer);
@@ -65,21 +62,19 @@ public class SelectorDemo
 						byteBuffer.clear();
 						reads = channel.read(byteBuffer);
 					}
-					SelectionKey sk  = channel.register(selector, SelectionKey.OP_WRITE);
+					SelectionKey sk = channel.register(selector, SelectionKey.OP_WRITE);
 					break;
 				}
 				else if (key.isWritable())
 				{
-					SocketChannel sc = (SocketChannel)key.channel();
+					SocketChannel sc = (SocketChannel) key.channel();
 					sc.write(ByteBuffer.wrap("Hello World".getBytes()));
 					sc.socket().close();
 					sc.close();
 					break;
 				}
 				keyIterator.remove();
-				break;
 			}
 		}
-		
 	}
 }
