@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <context:component-scan base-package="com.ninja.jmx.spring"/>
+  
+  <bean id="mbeanServer" class="org.springframework.jmx.support.MBeanServerFactoryBean"/>
+  
+
+  <!-- this bean must not be lazily initialized if the exporting is to happen -->
+  <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
+    <property name="beans">
+      <map>
+        <entry key="bean:name=personMBean" value-ref="personMBean"/>
+      </map>
+    </property>
+    <property name="server" ref="mbeanServer"/>
+  </bean>
+
+  <bean id="personMBean" class="com.ninja.jmx.spring.PersonMBean">
+    <property name="id" value="1"/>
+    <property name="name" value="Abc Def"/>
+  </bean>
+  
+<!--
+Now expose the server for remote access via RMI
+Local access:	service:jmx:rmi://localhost/jndi/rmi://localhost:10099/myconnector
+Remote access: 	service:jmx:rmi://your.server.com/jndi/rmi://localhost:10099/myconnector
+
+<bean
+	class="org.springframework.jmx.support.ConnectorServerFactoryBean"
+	depends-on="rmiRegistry">
+	<property name="objectName" value="connector:name=rmi" />
+	<property name="serviceUrl"
+		value="service:jmx:rmi://localhost/jndi/rmi://localhost:8082/myconnector" />
+</bean>
+
+<bean id="rmiRegistry"
+	class="org.springframework.remoting.rmi.RmiRegistryFactoryBean">
+	<property name="port" value="8082" />
+</bean>
+-->
+</beans>

@@ -11,6 +11,7 @@
    	<module>ninja-common</module>
    	<module>ninja-guava</module>
    	<module>ninja-jetty</module>
+   	<module>ninja-jmx</module>
    </modules>
    
    <dependencies>

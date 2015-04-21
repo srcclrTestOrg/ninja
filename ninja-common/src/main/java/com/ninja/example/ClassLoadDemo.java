@@ -15,7 +15,12 @@ public class ClassLoadDemo
 	 */
 	public static void main(String[] args)
 	{
+		String[] strs = new String[]{"1","2"};
 		System.out.println(java.lang.String.class.getClassLoader());
+		System.out.println(System.getProperty("java.class.path"));
+		System.out.println(Thread.currentThread().getContextClassLoader());
+		/**Array  classloader is associated with the element of the array**/
+		System.out.println(strs.getClass().getClassLoader());
 	}
 
 }
